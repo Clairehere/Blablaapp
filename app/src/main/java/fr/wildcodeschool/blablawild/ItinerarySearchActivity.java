@@ -32,10 +32,13 @@ public class ItinerarySearchActivity extends AppCompatActivity {
                 else {
                    
                     Intent intentSearch = new Intent(ItinerarySearchActivity.this, ItineraryListActivity.class);
+
                     editTextDepart = editTextDestination.getText().toString();
                     intentSearch.putExtra("des", editTextDepart);
+
                     editTextDes=editTextDep.getText().toString();
                     intentSearch.putExtra("dep", editTextDes);
+
                     startActivity(intentSearch);
 
                 }
