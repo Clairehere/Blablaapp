@@ -10,4 +10,12 @@
     <string name="_01_01_1970">01/01/1970</string>
     <string name="lien"><![CDATA[>>]]></string>
 
+    <string-array name="listArray">
+        <item>Please select…</item>
+        <item>Car</item>
+        <item>Boat</item>
+        <item>Plane</item>
+    </string-array>
+
+
 </resources>
