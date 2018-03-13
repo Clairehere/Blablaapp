@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -17,13 +18,19 @@ public class ItineraryListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itinerary_list);
 
+        //ancien code avec 2intent et getextra
+        //String destination = getIntent().getStringExtra("des");
+        //String dep;
+        //switch (dep = getIntent().getStringExtra("dep")) {
+        //}
+        //this.setTitle(dep + " >> " + destination);
 
-        String destination = getIntent().getStringExtra("des");
-        String dep;
-        switch (dep = getIntent().getStringExtra("dep")) {
-        }
-        this.setTitle(dep + " >> " + destination);
+        //pour le recuperer avec un seul
+        //recuperer son model avec getIntent().getExtras().getParcelable("troisen1");
+        SearchModel recupTroisEn1= getIntent().getExtras().getParcelable("troisen1");
+        this.setTitle(recupTroisEn1.departure+" >> "+recupTroisEn1.destination);
 
+        Toast.makeText(this, recupTroisEn1.date, Toast.LENGTH_SHORT).show();
 
 
             // [...]

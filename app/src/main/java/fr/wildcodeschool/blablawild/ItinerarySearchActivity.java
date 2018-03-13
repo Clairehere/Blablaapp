@@ -24,6 +24,9 @@ public class ItinerarySearchActivity extends AppCompatActivity {
                 TextView editTextDestination=findViewById(R.id.editTextDestination);
                 String editTextDes=editTextDestination.getText().toString();
 
+                TextView editTextDate=findViewById(R.id.editTextDate);
+                String date=editTextDate.getText().toString();
+
 
                 if(editTextDepart.equals("")||editTextDes.equals("")){
                     Toast.makeText(ItinerarySearchActivity.this, "Error", Toast.LENGTH_SHORT).show();
@@ -31,13 +34,17 @@ public class ItinerarySearchActivity extends AppCompatActivity {
 
                 else {
                    
+                   // Intent intentSearch = new Intent(ItinerarySearchActivity.this, ItineraryListActivity.class);
+
+                   // editTextDepart = editTextDestination.getText().toString();
+                   // intentSearch.putExtra("des", editTextDepart);
+
+                   // editTextDes=editTextDep.getText().toString();
+                   // intentSearch.putExtra("dep", editTextDes);
+
                     Intent intentSearch = new Intent(ItinerarySearchActivity.this, ItineraryListActivity.class);
-
-                    editTextDepart = editTextDestination.getText().toString();
-                    intentSearch.putExtra("des", editTextDepart);
-
-                    editTextDes=editTextDep.getText().toString();
-                    intentSearch.putExtra("dep", editTextDes);
+                    SearchModel troisEnUn=new SearchModel(editTextDepart, editTextDes, date);
+                    intentSearch.putExtra("troisen1", troisEnUn);
 
                     startActivity(intentSearch);
 
