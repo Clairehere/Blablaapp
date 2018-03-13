@@ -73,9 +73,11 @@
         android:ems="10"
         android:hint="@string/_01_01_1970"
         android:inputType="date"
+        android:focusable="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDate"
-        tools:ignore="TextFields" />
+        tools:ignore="TextFields"
+        />
 
     <Button
         android:id="@+id/buttonSearch"

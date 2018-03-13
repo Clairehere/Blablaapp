@@ -10,9 +10,9 @@ import static java.lang.System.out;
  */
 
 public class SearchModel implements Parcelable {
-    public String departure;
-    public String destination;
-    public String date;
+    private String departure;
+    private String destination;
+    private String date;
 
     public SearchModel(String departure, String destination, String date) {
         this.departure = departure;

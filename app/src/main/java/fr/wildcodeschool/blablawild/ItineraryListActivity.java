@@ -28,9 +28,9 @@ public class ItineraryListActivity extends AppCompatActivity {
         //pour le recuperer avec un seul
         //recuperer son model avec getIntent().getExtras().getParcelable("troisen1");
         SearchModel recupTroisEn1= getIntent().getExtras().getParcelable("troisen1");
-        this.setTitle(recupTroisEn1.departure+" >> "+recupTroisEn1.destination);
+        this.setTitle(recupTroisEn1.getDeparture()+" >> "+recupTroisEn1.getDestination());
 
-        Toast.makeText(this, recupTroisEn1.date, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, recupTroisEn1.getDate(), Toast.LENGTH_SHORT).show();
 
 
             // [...]
@@ -53,6 +53,8 @@ public class ItineraryListActivity extends AppCompatActivity {
 
             // [...]
         }
+
+
 
 
     }
