@@ -75,7 +75,7 @@ public class VehicleActivity extends AppCompatActivity  {
                                 if(!textkilo.isEmpty()){
 
 
-                                    kilo2=Integer.parseInt(hours.getText().toString());
+                                    kilo2=Integer.parseInt(kilometre.getText().toString());
 
                                 }
 
@@ -136,7 +136,7 @@ public class VehicleActivity extends AppCompatActivity  {
                                 if(!textspeed.isEmpty()){
 
 
-                                    speed2=Integer.parseInt(hours.getText().toString());
+                                    speed2=Integer.parseInt(speed.getText().toString());
 
                                 }
 
